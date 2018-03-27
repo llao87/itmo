@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>task 3</title>
+</head>
+<body>
+  <script>
+  /*
+  Дано целое число в диапазоне 0 - 9.
+
+  Вывести строку - название соответствующей цифры на русском языке (0 - "ноль",
+  1 - "один", 2 - "два", ...).
+  */
+  function main() {
+
+    var x = 0, str = '';
+    x = parseInt(prompt('Введите число от 0 до 9'));
+
+    switch (x) {
+      case 0: {
+        str = 'Ноль';
+        break;
+      }
+      case 1: {
+        str = 'Один';
+        break;
+      }
+      case 2: {
+        str = 'Два';
+        break;
+      }
+      case 3: {
+        str = 'Три';
+        break;
+      }
+      case 4: {
+        str = 'Четыре';
+        break;
+      }
+      case 5: {
+        str = 'Пять';
+        break;
+      }
+      case 6: {
+        str = 'Шесть';
+        break;
+      }
+      case 7: {
+        str = 'Семь';
+        break;
+      }
+      case 8: {
+        str = 'Восемь';
+        break;
+      }
+      case 9: {
+        str = 'Девять';
+        break;
+      }
+      case 0: {
+        str = 'Ноль';
+        break;
+      }
+      default: {
+        str = 'Похоже, Вы не следуете правилам игры. Ввести требуется число от 0 до 9.';
+        break;
+      }
+    }
+    console.log(str);
+  }
+
+  main();
+  </script>
+</body>
+</html>

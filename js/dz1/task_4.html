@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>task 4</title>
+</head>
+<body>
+  <script>
+  /*
+  Дано целое число в диапазоне 1 - 5.
+  Вывести строку - словесное описание соответствующей оценки
+  1 - "плохо"
+  2 - "неудовлетворительно"
+  3 - "удовлетворительно"
+  4 - "хорошо"
+  5 - "отлично"
+  */
+  function main() {
+
+    var x = 0, str = '';
+    x = parseInt(prompt('Введите оценку от 1 до 5'));
+
+    switch (x) {
+      case 1: {
+        str = 'Плохо';
+        break;
+      }
+      case 2: {
+        str = 'Неудовлетворительно';
+        break;
+      }
+      case 3: {
+        str = 'Удовлетворительно';
+        break;
+      }
+      case 4: {
+        str = 'Хорошо';
+        break;
+      }
+      case 5: {
+        str = 'Отлично';
+        break;
+      }
+      default: {
+        str = 'Похоже, Вы не следуете правилам игры. Ввести требуется оценку от 1 до 5.';
+        break;
+      }
+    }
+
+
+    console.log(str);
+  }
+
+  main();
+  </script>
+</body>
+</html>

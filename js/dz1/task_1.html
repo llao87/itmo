@@ -8,46 +8,49 @@
 </head>
 <body>
   <script>
+  function main() {
     /* Из трех данных чисел выбрать наименьшее. */
-    var a, b, c;
+    var a = 0, b = 0, c = 0;
 
-    a = parseFloat(prompt('Введите А', defaultStatus));
-    b = parseFloat(prompt('Введите B', defaultStatus));
-    c = parseFloat(prompt('Введите C', defaultStatus));
+    a = parseInt(prompt('Введите А'));
+    b = parseInt(prompt('Введите B'));
+    c = parseInt(prompt('Введите C'));
 
-    if (!isNaN(a) || !isNaN(b) || !isNaN(c)) {
-      alert('Одно из значений не число');
-    } else if (a == b && a == c) {
-      alert('Все значения равны');
+    if (isNaN(a) || isNaN(b) || isNaN(c)) {
+      console.log('Одно из значений не число');
+    } else if (a === b && a === c) {
+      console.log('Все значения равны');
     } else {
 
 
-    if (a == b) {
-      if (a < c) {
-        alert('Значения: a=' + a + ' и ' + ' b=' + b + ' равны и являются наименьшими');
+      if (a === b) {
+        if (a < c) {
+          console.log('Значения: a=' + a + ' и ' + ' b=' + b + ' равны и являются наименьшими');
+        } else {
+          console.log('Значение: c=' + c + ' является наименьшим');
+        }
+      } else if (b === c) {
+        if (b < a) {
+          console.log('Значения: b=' + b + ' и ' + ' c=' + c + ' равны и являются наименьшими');
+        } else {
+          console.log('Значение: a=' + a + ' является наименьшим');
+        }
+      } else if (a === c) {
+        if (a < b) {
+          console.log('Значения: a=' + a + ' и ' + ' c=' + c + ' равны и являются наименьшими');
+        } else {
+          console.log('Значение: b=' + b + ' является наименьшим');
+        }
+      } else if (a<b && a<c) {
+        console.log('Наименьшее значение: a = ' + a);
+      } else if (b<a && b<c) {
+        console.log('Наименьшее значение: b = ' + b);
       } else {
-        alert('Значение: c=' + c + ' является наименьшим');
+        console.log('Наименьшее значение: c = ' + c);
       }
-    } else if (b == c) {
-      if (b < a) {
-        alert('Значения: b=' + b + ' и ' + ' c=' + c + ' равны и являются наименьшими');
-      } else {
-        alert('Значение: a=' + a + ' является наименьшим');
-      }
-    } else if (a == c) {
-      if (a < b) {
-        alert('Значения: a=' + a + ' и ' + ' c=' + c + ' равны и являются наименьшими');
-      } else {
-        alert('Значение: b=' + b + ' является наименьшим');
-      }
-    } else if (a<b && a<c) {
-      alert('Наименьшее значение: a = ' + a);
-    } else if (b<a && b<c) {
-      alert('Наименьшее значение: b = ' + b);
-    } else {
-      alert('Наименьшее значение: c = ' + c);
     }
-}
+  }
+  main();
   </script>
 </body>
 </html>

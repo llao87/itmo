@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>task 5</title>
+</head>
+<body>
+  <script>
+  /*
+  Проверить истинность высказывания: "Среди трех данных целых чисел есть хоть бы
+  одна пара совпадающих".
+
+  Требуется вывести логическое значение True, если приведенное высказывание для
+  предложенных исходных данных является истинным, и значение False в противном
+  случае.
+  */
+  function main() {
+    var a = 0, b = 0, c = 0;
+    a = parseInt(prompt('Введите число A'));
+    b = parseInt(prompt('Введите число B'));
+    c = parseInt(prompt('Введите число C'));
+
+    if (a === b || a === c || b === c) {
+      console.log("Утверждение верно!");
+    } else {
+      console.log("Утверждение ошибается!");
+    }
+  }
+
+  main();
+  </script>
+</body>
+</html>

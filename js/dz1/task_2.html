@@ -4,22 +4,46 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>task 1</title>
+  <title>task 2</title>
 </head>
 <body>
   <script>
-    /*
-    Дано целое число, лежащее в диапазоне от -999 до 999.
-    Вывести строку - словесное описание данного числа вида
-    "отрицательное двузначное число", "нулевое число",
-    "положительное однозначное число" и т.д.
-    Из трех данных чисел выбрать наименьшее.
-    */
-    
-    var x;
-
+  /*
+  Дано целое число, лежащее в диапазоне от -999 до 999.
+  Вывести строку - словесное описание данного числа вида
+  "отрицательное двузначное число", "нулевое число",
+  "положительное однозначное число" и т.д.
+  Из трех данных чисел выбрать наименьшее.
+  */
+  function main() {
+    var x=0, xDescription = '';
     x = parseFloat(prompt('Введите число', defaultStatus));
 
+
+    if (x > 0) {
+      xDescription += 'Положительное';
+    } else if (x < 0) {
+      xDescription += 'Отрицательное';
+      x *= -1;
+    } else {
+      xDescription += 'Нулевое число';
+      console.log(xDescription);
+      return;
+    }
+
+    if (x - 100 > 0) {
+      xDescription += ' трехзначное';
+    } else if (x - 10 > 0) {
+      xDescription += ' двухзначное';
+    } else {
+      xDescription += ' однозначное';
+    }
+
+
+    console.log(xDescription);
+  }
+
+  main();
   </script>
 </body>
 </html>
