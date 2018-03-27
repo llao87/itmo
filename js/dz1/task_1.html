@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>task 1</title>
+</head>
+<body>
+  <script>
+    /* Из трех данных чисел выбрать наименьшее. */
+    var a, b, c;
+
+    a = parseFloat(prompt('Введите А', defaultStatus));
+    b = parseFloat(prompt('Введите B', defaultStatus));
+    c = parseFloat(prompt('Введите C', defaultStatus));
+
+    if (!isNaN(a) || !isNaN(b) || !isNaN(c)) {
+      alert('Одно из значений не число');
+    } else if (a == b && a == c) {
+      alert('Все значения равны');
+    } else {
+
+
+    if (a == b) {
+      if (a < c) {
+        alert('Значения: a=' + a + ' и ' + ' b=' + b + ' равны и являются наименьшими');
+      } else {
+        alert('Значение: c=' + c + ' является наименьшим');
+      }
+    } else if (b == c) {
+      if (b < a) {
+        alert('Значения: b=' + b + ' и ' + ' c=' + c + ' равны и являются наименьшими');
+      } else {
+        alert('Значение: a=' + a + ' является наименьшим');
+      }
+    } else if (a == c) {
+      if (a < b) {
+        alert('Значения: a=' + a + ' и ' + ' c=' + c + ' равны и являются наименьшими');
+      } else {
+        alert('Значение: b=' + b + ' является наименьшим');
+      }
+    } else if (a<b && a<c) {
+      alert('Наименьшее значение: a = ' + a);
+    } else if (b<a && b<c) {
+      alert('Наименьшее значение: b = ' + b);
+    } else {
+      alert('Наименьшее значение: c = ' + c);
+    }
+}
+  </script>
+</body>
+</html>
