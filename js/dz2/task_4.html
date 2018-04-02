@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 2-4</title>
+</head>
+<body>
+	<script>
+		/*
+		Единицы длины пронумерованы следующим образом: 
+		1 — дециметр,
+		2 — километр,
+		3 — метр,
+		4 — миллиметр,
+		5 — сантиметр.
+		Дан номер единицы длины и длина отрезка L в этих 
+		единицах (вещественное число). Вывести длину данного 
+		отрезка в метрах. 
+		*/
+		function main() {
+			let dimensions = [['дециметр', 'дм', 10],
+							  ['километр', 'км', 1000],
+							  ['метр', 'м', 1],
+							  ['миллиметр', 'мм', 0.001], 
+							  ['сантиметр', 'см', 0.01]];
+
+			console.log(dimensions);
+
+			let length = parseFloat(prompt('Введите длину отрезка L:'));
+			let dimension = parseInt(prompt('Введите номер единицы измерения длины:\n1 - дециметр\n2 - километр\n3 - метр\n4 - миллиметр\n5 - сантиметр'));
+
+
+			if (!isNaN(dimension) || dimension >= 1 || dimension <= 5) {
+				alert ('Длина L = ' + length + ' ' + dimensions[dimension-1][1] + ' равняется: ' + length * dimensions[dimension-1][2] + ' м.');
+			} else {
+				console.log('Такой единицы длины нет.');
+			}
+		}
+		main();
+	</script>
+</body>
+</html>

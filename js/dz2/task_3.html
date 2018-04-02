@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 2-3</title>
+</head>
+<body>
+	<script>
+		/*
+		Дан номер месяца (1 — январь, 2 — февраль, ...).
+		Вывести название соответствующего времени года ("зима", "весна" и т.д.). 
+		 */
+		function main() {
+
+			let seasons = ['Зима','Весна','Лето','Осень'];
+	  		
+	  		let monthNumber = parseInt(prompt('Введите номер месяца от 1 до 12'));
+
+	  		if (monthNumber < 1 || monthNumber > 12 || isNaN(monthNumber)) {
+	  			console.log('Месяц введен некорректно!');
+	  			return;
+	  		}
+	  		
+	  		switch (monthNumber) {
+	  			case 12 : {}
+	  			case 1: {}
+	  			case 2: {
+	  				console.log('Зима');
+	  				break;
+	  			}
+	  			case 3 : {}
+	  			case 4: {}
+	  			case 5: {
+	  				console.log('Весна');
+	  				break;
+	  			}
+	  			case 6 : {}
+	  			case 7: {}
+	  			case 8: {
+	  				console.log('Лето');
+	  				break;
+	  			}
+	  			default : {
+	  				console.log('Осень');
+	  				break;
+	  			}
+	  		}
+	  		return;
+	  	}
+	  	main();
+	  </script>
+	</body>
+	</html>

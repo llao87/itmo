@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 2-2</title>
+</head>
+<body>
+	<script>
+		function main() {
+	  	/*
+	  	Есть три вершины. Координаты X, Y, Z заданы как целые числа.
+	  	Нужно определить - является ли треугольник с заданными 
+	  	координатами прямоугольным.
+	  	*/
+
+	  	/*
+	  	Допускаю необходимость prompt() для ввода через интерфейс.
+	  	Иначе сделал бы входной массив и обошелся без преобразований.
+	  	*/
+	  	let abc = [];
+	  	
+	  	abc['a'] = prompt('Введите координаты X,Y,Z через "," для вершины А:').split(",");
+	  	if (abc['a'].length !== 3) {
+	  		console.log('Координаты вершины А заданы не тремя координатами');
+	  		return;
+	  	}
+
+		abc['b'] = prompt('Введите координаты X,Y,Z через "," для вершины B:').split(",");
+	  	if (abc['a'].length !== 3) {
+	  		console.log('Координаты вершины B заданы не тремя координатами');
+	  		return;
+	  	}
+
+
+	  	abc['c'] = prompt('Введите координаты X,Y,Z через "," для вершины C:').split(",");
+		if (abc['a'].length !== 3) {
+	  		console.log('Координаты вершины C заданы не тремя координатами');
+	  		return;
+	  	}
+
+	  	console.log(abc);
+		
+		/* проверочные координаты */
+	  	/*
+	  	 abc['a'] = [0,0,0];
+	  	 abc['b'] = [4,0,0];
+	  	 abc['c'] = [2,4,0];
+	  	 */
+
+	  	/*
+	  	 * Прямоугольный треугольник если c^2 = b^2 + a^2, где a,b,c - стороны
+	  	 ;
+	  	 */
+
+	  	 let ab = 0;
+	  	 let bc = 0;
+	  	 let ac = 0;
+
+	  	 for (let i=0; i<3; i++) {
+	  	 	if (!isNaN(abc['a'][i])) {
+	  	 		abc['a'][i] = parseInt(abc['a'][i]);
+	  	 	} else {
+				console.log('Координаты вершины А введены неверно');
+	  			return;
+	  	 	}
+	  	 	abc['b'][i] = parseInt(abc['b'][i]);
+	  	 	abc['c'][i] = parseInt(abc['c'][i]);
+
+	  	 	ab = ab + abc['b'][i]**2 - abc['a'][i]**2;
+	  	 	ac = ac + abc['c'][i]**2 - abc['a'][i]**2;
+	  	 	bc = bc + abc['c'][i]**2 - abc['b'][i]**2;
+
+	  	 	console.log(ab + ' ' + bc + ' ' + ac);
+	  	 }
+
+
+	  	 if (ab === ac + bc || ac === ab + bc || bc == ab + ac) {
+	  	 	console.log('Невероятно! ABC оказался прямоугольным треугольником');
+	  	 } else {
+	  	 	console.log('Это фиаско! ABC ни разу не прямоугольный треугольник');
+	  	 }
+	  	}
+	  	main();
+	  </script>
+	</body>
+	</html>

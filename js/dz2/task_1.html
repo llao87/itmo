@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 2-1</title>
+</head>
+<body>
+	<script>
+		function main() {
+  	/*
+  	Перераспределить значения переменных X и Y так, чтобы в X оказалось 
+  	меньшее из этих значений, а в Y — большее.
+  	*/
+  	var a = '', b = '', tmp = '';
+  	a = parseFloat(prompt('Введите число А'));
+  	b = parseFloat(prompt('Введите число B'));
+
+  	if (isNaN(a) || isNaN(b)) {
+  		console.log('А и/или В введено неправильно или не яляется числом. Обновите страницу.')
+  		
+  	} else {
+  		if (a > b) {
+  			tmp = a;
+  			a = b;
+  			b = tmp;
+  		}
+  		console.log('Отсортированные значения А = ' + a + ' и В = ' + b);
+  	}
+  }
+  main();
+</script>
+</body>
+</html>
