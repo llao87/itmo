@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 3-1</title>
+</head>
+<body>
+	<script>
+		function main() {
+	  	/*
+	  	Дана строка, изображающая целое число. Вывести сумму цифр этого числа. 
+	  	*/
+
+	  	let str = prompt('Введите строку из цифр');
+	  	let arr = str.split('');
+	  	let Sum = 0;
+
+	  	for (let i=0; i < arr.length; i++) {
+	  		Sum += parseInt(arr[i]);
+	  	}
+
+	  	if (isNaN(Sum))
+	  		console.log('Строка состоит не только из цифр!');
+	  	else
+	  		console.log(Sum);
+
+	  }
+	  main();
+	</script>
+</body>
+</html>
