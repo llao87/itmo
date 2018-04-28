@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 4-3</title>
+</head>
+<body>
+	<script>
+		function main() {
+	  	/*
+			Задан массив  - [12,4,3,10,1,20]. Удалить из него наименьшее и наибольшее значение.
+	  	*/
+
+			let arr = [21,12,4,3,10,1,20];
+			console.log('Исходный массив: ' + arr);
+
+
+			let minIndex = maxIndex = 0;
+			let minElem = maxElem = arr[0];
+
+			/*
+			Хотел использовать  Math.max.apply()  и  Math.min.apply(), но прочитал в
+			учебнике, что он делает вдвое больше сравнений чем нужно и решил сделать
+			циклом за 1 пробег. Среди одинаковых значений меньшим или большим из пары
+			считаем элемент, встретившийся первым.
+			*/
+			for (let i = 1; i < arr.length; i++) {
+				if (arr[i] > maxElem) {
+					maxElem = arr[i];
+					maxIndex = i;
+				}
+				if (arr[i] < minElem) {
+					minElem = arr[i];
+					minIndex = i;
+				}
+			}
+
+			console.log('Минимальное значение в массиве на ' + minIndex + ' месте и равно ' + minElem);
+			console.log('Максимальное значение в массиве на ' + maxIndex + ' месте и равно ' + maxElem);
+
+			/*
+			т.к. минимальный элемент может быть левее или правее максимального,
+			а удаление элемента из массива сократит его на 1 элемент и индексы
+			могут изменяться, то стоит стереть тот, что встречается первым, а
+			потом второй, но с поправкой на удаление 1 элемента
+		  */
+			if (minIndex < maxIndex) {
+				arr.splice(minIndex,1);
+				arr.splice(maxIndex-1,1);
+			} else {
+				arr.splice(maxIndex,1);
+				arr.splice(minIndex-1,1);
+			}
+
+
+			console.log('Массив с удаленными элементами: ' + arr);
+		}
+	  main();
+	</script>
+</body>
+</html>

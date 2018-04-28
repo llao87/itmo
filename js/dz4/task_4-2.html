@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>task 4-2</title>
+	<style>
+		table {
+			border: 1px solid #000;
+		}
+		table tr td {
+			border: 1px solid #000;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 24px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function main() {
+	  	/*
+			Одномерным массивом задана доска 3 на 3
+			var area = [ null, null, null, null, null, null, null, null, null ]
+
+			Необходимо сформировать игровое поле состоящее из квадратов для крестиков-ноликов  в HTML.
+			При появлении в массиве 0-ля рисовать нолик , 1-цы крестик
+			Пример:  [ 1, null, 0, null, 1, null, null, null, null ] на поле 2-а крестика, и 1-н нолик.
+	  	*/
+			let area = [1, null, 0, 0, 0, 1, 1, null, null];
+			let str = '<table>';
+
+			for (let i = 0; i < 3; i++) {
+				str += '<tr>';
+				for (let j = 0; j < 3; j++) {
+					if (area[i*3+j] === null) {
+						str += '<td></td>';
+					} else if (area[i*3+j] === 1) {
+						str += '<td> X </td>';
+					} else if (area[i*3+j] === 0) {
+						str += '<td> O </td>';
+					}
+				}
+				str += '</tr>';
+			}
+			str += '</table>';
+			document.write(str);
+	  }
+	  main();
+	</script>
+</body>
+</html>
