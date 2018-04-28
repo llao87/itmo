@@ -1,8 +1,18 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*
+  Рассчитать скорость движения машины и вывести её в удобочитаемом виде.
+  Вывод в км/ч, м/c. Исходные данные: Пройденный путь - S; Время движения - t.
  */
 
+$S = 203;
+$t = 3;
+
+$Skm = $S / $t;
+$Sm = ($S * 1000) / ($t * 60 * 60);
+
+echo 'Средняя скорость автомобился на пути S = ' . $S . ' км.,<br>'
+ . 'пройденного за время t = ' . $t . ' ч.,<br> составляет:<br>'
+ . 'V =' . $Skm . ' км/час <br>'
+ . ' или <br>'
+ . 'V = ' . $Sm . ' м/с';
