@@ -6,10 +6,10 @@
  */
 
 
-$arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j'];
+$arr = range('a', 'j');
 
 foreach ($arr as $key => $value) {
     $newArr[$key] = mb_strtoupper($arr[$key]);
 }
 
-var_dump($newArr);
+print_r($newArr);
